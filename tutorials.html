@@ -3,351 +3,184 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProdX Keyboard Tutorials</title>
+  <title>ProdX Keyboard Privacy Policy</title>
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #172033;
-      --muted: #5f6b7a;
-      --line: #d8dee8;
-      --soft: #f5f7fa;
-      --nav: #eef3f9;
-      --accent: #1f6feb;
-      --accent-dark: #174ea6;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      margin: 0;
-      padding: 0 20px 56px;
-      color: var(--ink);
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #1f2933;
       background: #ffffff;
     }
-
-    .page {
-      display: grid;
-      grid-template-columns: 240px minmax(0, 900px);
-      gap: 32px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding-top: 40px;
-    }
-
-    header {
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 22px;
-      margin-bottom: 28px;
-    }
-
-    h1, h2, h3 {
-      color: #111827;
-      line-height: 1.25;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.35rem;
-      margin-top: 2.2rem;
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      margin: 1.25rem 0 0.35rem;
-    }
-
-    p {
-      margin: 0.65rem 0;
-    }
-
-    ul, ol {
-      padding-left: 1.45rem;
-    }
-
-    li {
-      margin: 0.35rem 0;
-    }
-
-    .eyebrow {
-      margin: 0 0 0.35rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      max-width: 760px;
-      margin-top: 0.5rem;
-    }
-
-    .side-nav {
-      align-self: start;
-      position: sticky;
-      top: 24px;
-      border: 1px solid var(--line);
+    h1, h2 { color: #111827; }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; }
+    ul { padding-left: 1.5rem; }
+    .effective-date { font-weight: bold; margin-bottom: 2rem; }
+    .contact { font-weight: bold; }
+    .top-links {
+      margin: 0 0 2rem;
+      padding: 12px 14px;
+      border: 1px solid #d8dee8;
       border-radius: 8px;
-      padding: 14px;
-      background: var(--nav);
-      min-height: 240px;
+      background: #f5f7fa;
     }
-
-    .side-nav-title {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .side-nav-label {
-      display: block;
-      margin-bottom: 8px;
-      color: #111827;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-
-    .side-nav a {
-      display: block;
-      border-radius: 6px;
-      padding: 8px 10px;
-      color: var(--accent-dark);
+    .top-links a {
+      color: #174ea6;
+      font-weight: bold;
       text-decoration: none;
-      font-weight: 700;
-    }
-
-    .side-nav a:hover,
-    .side-nav a:focus {
-      background: #ffffff;
-      outline: none;
-    }
-
-    .button {
-      display: inline-block;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 8px 12px;
-      color: var(--accent-dark);
-      text-decoration: none;
-      background: #ffffff;
-      font-weight: 700;
-    }
-
-    .button.primary {
-      color: #ffffff;
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .lesson {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 18px;
-      margin: 18px 0;
-      background: #ffffff;
-    }
-
-    .note {
-      border-left: 4px solid var(--accent);
-      padding: 10px 14px;
-      margin: 16px 0;
-      background: var(--soft);
-      color: #253044;
-    }
-
-    .quick-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      margin: 18px 0;
-    }
-
-    .quick-list a {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px;
-      color: var(--ink);
-      background: var(--soft);
-      text-decoration: none;
-    }
-
-    .quick-list strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .support {
-      border-top: 1px solid var(--line);
-      margin-top: 36px;
-      padding-top: 24px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      margin-top: 34px;
-      padding-top: 18px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 700px) {
-      body {
-        padding: 0 16px 44px;
-      }
-
-      .page {
-        display: block;
-        padding-top: 28px;
-      }
-
-      .side-nav {
-        position: static;
-        margin-bottom: 22px;
-      }
-
-      .side-nav a {
-        display: inline-block;
-        margin-right: 6px;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <aside class="side-nav" aria-label="Tutorial sections">
-      <span class="side-nav-title">Sections</span>
-      <span class="side-nav-label">Tutorial navigation</span>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="#scanner">Document Scanner</a>
-      <a href="#scanner-ocr">Scanner To OCR</a>
-      <a href="#cleanup">Cleanup Warning</a>
-      <a href="#support">Support Development</a>
-    </aside>
+  <h1>Privacy Policy</h1>
+  <p class="effective-date">Effective Date: 23/05/2026</p>
+  <p class="top-links">Need help using the scanner or cleanup tools? Visit the <a href="tutorials.html">ProdX Keyboard tutorials</a>.</p>
 
-    <main>
-    <header>
-      <p class="eyebrow">ProdX Keyboard Help</p>
-      <h1>Tutorials</h1>
-      <p class="subtitle">Short guides for the main workspace tools that need a little explanation: document scanning, scanner-to-OCR flow, and cleanup warnings.</p>
-    </header>
+  <h2>1. Introduction</h2>
+  <p>ProdX Keyboard respects your privacy. This Privacy Policy explains how ProdX Keyboard handles data when you use the mobile application (“App”). This policy is a privacy notice, not a replacement for any rights you may have under applicable privacy or consumer-protection laws.</p>
 
-    <section aria-labelledby="start-title">
-      <h2 id="start-title">What This Page Covers</h2>
-      <div class="quick-list">
-        <a href="#scanner">
-          <strong>Document Scanner</strong>
-          Capture or import paper documents, clean them, and choose where to save the result.
-        </a>
-        <a href="#scanner-ocr">
-          <strong>Scanner To OCR</strong>
-          Use Scanner first for clean pages, then OCR when you need editable text.
-        </a>
-        <a href="#cleanup">
-          <strong>Cleanup Warning</strong>
-          Understand clipboard and temporary AI work cleanup prompts.
-        </a>
-      </div>
-    </section>
+  <h2>2. Information We Process</h2>
+  <p>ProdX Keyboard may process the following data:</p>
 
-    <section id="scanner" class="lesson" aria-labelledby="scanner-title">
-      <h2 id="scanner-title">Document Scanner</h2>
-      <p>Use Scanner when you want a clean digital copy of a paper document before OCR, review, or sharing.</p>
+  <p><strong>Keyboard and typing data:</strong><br>
+    The App may process text locally on your device to provide keyboard features such as typing, swipe input, suggestions, spell checking, grammar checking, word learning, and local AI tools.
+  </p>
 
-      <h3>How To Use It</h3>
-      <ol>
-        <li>Open the ProdX Keyboard main workspace.</li>
-        <li>Choose <strong>Scanner</strong> from the task list.</li>
-        <li>Capture a document with the camera, or import an existing photo from gallery/storage.</li>
-        <li>Use the scanner screen to crop, rotate, clean, and adjust pages.</li>
-        <li>Press the scanner finish/next button.</li>
-        <li>Choose where to save the cleaned PDF or JPEG using Android's save picker.</li>
-      </ol>
+  <p><strong>Sensitive fields:</strong><br>
+    The App is designed to suppress prediction, learning, AI handling, and outbound transfer from protected contexts such as passwords, OTPs, payment fields, banking fields, and other sensitive fields detected by Android input type, app context, labels, or content signals. Android field hints can vary, so protection is a design and implementation safeguard rather than an absolute guarantee.
+  </p>
 
-      <div class="note">
-        Scanner is for cleaning and saving document images. It is not a general PDF editor.
-      </div>
+  <p><strong>Voice input:</strong><br>
+    If you use dictation or punctuation training, the App may access your microphone and process audio on the device.
+  </p>
 
-      <h3>Best For</h3>
-      <ul>
-        <li>Paper forms, printed letters, receipts, notes, and book pages.</li>
-        <li>Photos that need crop/rotation cleanup before OCR.</li>
-        <li>Multi-page paper scans that should be saved as a clean PDF.</li>
-      </ul>
-    </section>
+  <p><strong>Media AI:</strong><br>
+    If you choose to attach an image, audio, or video file for AI analysis, the selected file may be copied into app storage for processing. Media AI, especially audio and video analysis, is experimental.
+  </p>
 
-    <section id="scanner-ocr" class="lesson" aria-labelledby="scanner-ocr-title">
-      <h2 id="scanner-ocr-title">Scanner To OCR</h2>
-      <p>Scanner and OCR are separate tools. Scanner prepares the page. OCR extracts editable text.</p>
+  <p><strong>Storage / files:</strong><br>
+    The App may access files you select for backup, restore, import, export, model import, or media attachment. The App does not access arbitrary files unless you choose them through Android’s file picker.
+  </p>
 
-      <h3>Recommended Flow</h3>
-      <ol>
-        <li>Run <strong>Scanner</strong> first to clean and save the paper document.</li>
-        <li>Return to the main workspace.</li>
-        <li>Choose <strong>OCR text extract</strong>.</li>
-        <li>Attach the cleaned scan you saved.</li>
-        <li>Run OCR to extract editable text.</li>
-      </ol>
+  <p><strong>Advertising and diagnostics:</strong><br>
+    The App uses advertising services for non-premium users. Premium disables ads. Advertising SDKs may collect or share data such as advertising identifiers, device identifiers, IP address, app interactions, and diagnostic information for advertising, analytics, fraud prevention, and service measurement.
+  </p>
 
-      <div class="note">
-        Keeping scanning separate from OCR means you keep a clean visual copy even if you later need to re-run OCR or review the original page.
-      </div>
+  <p><strong>Crash and analytics data:</strong><br>
+    If enabled in the shipped build, Firebase services may receive crash logs, diagnostics, app-instance identifiers, app lifecycle events, and purchase or subscription-related events.
+  </p>
 
-      <h3>Which Tool Should I Use?</h3>
-      <ul>
-        <li>Use <strong>Scanner</strong> when the image needs crop, rotate, cleanup, or a saved PDF/JPEG.</li>
-        <li>Use <strong>OCR text extract</strong> when you already have a readable image/PDF and need text.</li>
-        <li>Use both when the source is a paper document or a messy photo.</li>
-      </ul>
-    </section>
+  <p><strong>Purchases:</strong><br>
+    If you purchase an ad-removal subscription, Google Play Billing processes purchase and subscription information.
+  </p>
 
-    <section id="cleanup" class="lesson" aria-labelledby="cleanup-title">
-      <h2 id="cleanup-title">Cleanup Warning</h2>
-      <p>Some AI, OCR, document, and sharing workflows can leave result text in the clipboard or temporary AI work files. ProdX shows a cleanup warning when there is something real to clean.</p>
+  <p><strong>Downloads:</strong><br>
+    The App may contact Google Play, ML Kit, or model-hosting services to download optional dictionaries, translation models, OCR resources, or local AI model files.
+  </p>
 
-      <h3>What The Buttons Mean</h3>
-      <ul>
-        <li><strong>Clear clipboard</strong> removes ProdX-owned clipboard content.</li>
-        <li><strong>Delete temp files</strong> removes temporary AI work files created for processing.</li>
-        <li><strong>Later</strong> closes the warning without cleaning everything immediately.</li>
-      </ul>
+  <h2>3. How We Use Information</h2>
+  <ul>
+    <li>Provide keyboard input, suggestions, correction, grammar, swipe, and voice features.</li>
+    <li>Improve local keyboard behavior on your device.</li>
+    <li>Run local AI writing tools when available.</li>
+    <li>Provide optional translation, dictionary, OCR, and model-download features.</li>
+    <li>Display ads and support ad-removal purchases.</li>
+    <li>Diagnose crashes and app stability if diagnostics are enabled.</li>
+    <li>Verify subscriptions, downloads, and app integrity.</li>
+    <li>Prevent abuse, fraud, or misuse of the App.</li>
+  </ul>
 
-      <h3>Why The Warning May Stay Open</h3>
-      <p>The warning closes only after both cleanup areas are clear, or when you press Later. For example, if you clear the clipboard but temporary AI files still exist, the warning remains so you can finish cleanup in one place.</p>
+  <h2>4. Local Processing and Protected Typing Data</h2>
+  <p>ProdX Keyboard is designed so protected typing data does not leave your device through app-controlled outbound paths on normal, uncompromised Android devices.</p>
+  <p>Some optional non-download outbound network actions may require a device authentication (biometric or device credential) immediately before the transfer is allowed. The unlock approval is short-lived and is not stored as a permanent “always allowed” state.</p>
+  <p>Local keyboard learning, suggestions, grammar checks, OCR, translation, voice processing, and AI processing are intended to run on-device unless a feature clearly states otherwise or requires an optional network service selected by the user.</p>
 
-      <div class="note">
-        On resume, ProdX checks for actual cleanup residue first. The warning should not appear just for the sake of appearing.
-      </div>
-    </section>
+  <h2>5. Legal Basis for Processing</h2>
+  <p>Where required by law, including in the European Economic Area and the United Kingdom, we rely on the following legal bases:</p>
+  <ul>
+    <li><strong>Performance of a contract:</strong> to provide keyboard, typing, correction, subscription, and requested app features.</li>
+    <li><strong>Consent:</strong> for optional permissions such as microphone, file access, optional downloads, and any optional analytics or personalized advertising where consent is required.</li>
+    <li><strong>Legitimate interests:</strong> to maintain app security, prevent abuse, diagnose crashes, improve reliability, and operate non-sensitive app functionality.</li>
+    <li><strong>Legal obligation:</strong> to comply with applicable laws, platform rules, purchase records, tax, accounting, or lawful requests.</li>
+  </ul>
 
-    <section id="support" class="support" aria-labelledby="support-title">
-      <h2 id="support-title">Support Development</h2>
-      <p>ProdX Keyboard is an independent project. If you want to add a donation or support link, this section is ready for it.</p>
-      <p>
-        <a class="button primary" href="#" aria-disabled="true">Donation link coming soon</a>
-      </p>
-      <p class="muted">Replace the button URL with your preferred donation page when it is ready.</p>
-    </section>
-      <footer>
-        <p>ProdX Keyboard tutorials. For privacy details, see the <a href="privacy-policy.html">Privacy Policy</a>.</p>
-      </footer>
-    </main>
-  </div>
+  <h2>6. Third-Party Services</h2>
+  <ul>
+    <li>Google Mobile Ads / AdMob for banner advertising.</li>
+    <li>Google Play Billing for subscriptions.</li>
+    <li>Google Play services and Play Integrity for app integrity and purchase-related checks.</li>
+    <li>Firebase Crashlytics and/or Firebase Analytics if enabled for diagnostics and analytics.</li>
+    <li>Google ML Kit for downloadable offline translation, OCR, or language resources.</li>
+    <li>Google Play Asset Delivery for optional dictionary or resource downloads.</li>
+    <li>Model-hosting services for optional local AI model downloads.</li>
+  </ul>
+  <p>These services may process data according to their own privacy policies and terms. Third-party services may process data outside your country or region.</p>
+
+  <h2>7. User Control and Permissions</h2>
+  <ul>
+    <li>Denying microphone permission disables voice input.</li>
+    <li>Denying file access prevents backup, restore, import, export, selected media analysis, or selected model import.</li>
+    <li>You may remove ads through the available subscription option, if offered.</li>
+    <li>You can avoid optional downloads by not using features that require additional resources.</li>
+  </ul>
+
+  <h2>8. Data Sharing</h2>
+  <p>We do not sell protected keyboard typing data.</p>
+  <p>Some service data may be transmitted to third-party services when required for ads, billing, downloads, diagnostics, app integrity, or optional network features. Protected keyboard typing data is designed to be blocked from app-controlled outbound transfer.</p>
+  <p>Advertising identifiers, device identifiers, IP address, app interactions, and diagnostic information may be collected or shared by advertising and analytics providers. Depending on your location, this may be considered “sharing” or “sale” for advertising purposes under some privacy laws, even when ProdX Keyboard does not sell data for money.</p>
+
+  <h2>9. Data Retention</h2>
+  <p>Keyboard preferences, learned words, local dictionaries, backups, imported models, downloaded resources, caches, and temporary media files may be stored locally on your device until you delete them, clear app data, reset the related feature, or uninstall the App.</p>
+  <p>Temporary processing files are intended to be removed when no longer needed. Clipboard content and temporary AI work files may be cleared automatically after first use (such as after pasting or sharing), and may be hard-deleted after a time limit even if you postpone cleanup prompts. Android system behavior, app crashes, backups, or user-created exports may affect what remains.</p>
+  <p>ProdX Keyboard does not maintain its own user account database or developer-controlled cloud database for keyboard content.</p>
+  <p>Third-party services retain data according to their own policies.</p>
+
+  <h2>10. Data Deletion and Local Data Removal</h2>
+  <p>ProdX Keyboard does not create user accounts and does not maintain a developer-controlled server database of users.</p>
+  <p>You can remove locally stored app data by using:<br>
+    <strong>ProdX Keyboard Settings &gt; Privacy, permissions &amp; security &gt; Delete local keyboard data</strong>
+  </p>
+  <p>You can also clear the App’s data from Android system settings or uninstall the App. This may remove local preferences, learned words, local dictionaries, caches, temporary media files, downloaded resources, and other app-local data, subject to Android system behavior and any backups or exports you created yourself.</p>
+  <p>If you contact us for support, you may request deletion of support-related information that you provided directly to us by emailing:
+    <span class="contact">lprempay@gmail.com</span>
+  </p>
+  <p>Please include “ProdX Keyboard data deletion request” in the subject.</p>
+  <p>Data handled by third-party services such as Google Mobile Ads, Google Play Billing, Firebase, Google Play services, ML Kit, Play Asset Delivery, or model-hosting services is governed by those providers’ privacy policies, retention rules, and user controls. ProdX Keyboard cannot independently delete records controlled by those third-party services.</p>
+
+  <h2>11. Your Privacy Rights</h2>
+  <p>Depending on your location, you may have rights to:</p>
+  <ul>
+    <li>Request access to personal information.</li>
+    <li>Request correction or deletion of personal information.</li>
+    <li>Request a copy or export of certain information.</li>
+    <li>Object to or restrict certain processing.</li>
+    <li>Withdraw consent where processing is based on consent.</li>
+    <li>Opt out of certain advertising-related sharing where required by law.</li>
+    <li>Lodge a complaint with your local data protection authority.</li>
+  </ul>
+  <p>To make a privacy request, contact:
+    <span class="contact">lprempay@gmail.com</span>
+  </p>
+  <p>Because ProdX Keyboard does not maintain user accounts, we may need limited information to verify and respond to your request. Some data may exist only locally on your device and can only be deleted by you through the App or Android system settings.</p>
+
+  <h2>12. Children’s Privacy</h2>
+  <p>ProdX Keyboard is not directed to children under 13 or the minimum digital-consent age in your country. We do not knowingly collect personal information from children. If you believe a child has provided personal information through the App, contact us so we can review the concern.</p>
+
+  <h2>13. Security</h2>
+  <p>We take reasonable technical measures to protect user data, including local processing, sensitive-field detection, and outbound security gates. No app can guarantee protection against rooted devices, compromised operating systems, malicious apps, third-party keyboards, screen capture, accessibility abuse, or system-level interception.</p>
+
+  <h2>14. International Transfers</h2>
+  <p>Third-party services used by the App may process data in countries other than where you live. Where required, such transfers are handled according to the safeguards and terms used by those providers.</p>
+
+  <h2>15. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the Effective Date at the top of this document. Users are encouraged to review this policy periodically.</p>
+
+  <h2>16. Contact Us</h2>
+  <p>If you have any questions or concerns regarding this Privacy Policy, contact:
+    <span class="contact">lprempay@gmail.com</span>
+  </p>
 </body>
 </html>
